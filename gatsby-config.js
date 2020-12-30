@@ -7,6 +7,23 @@ module.exports = {
   plugins: [
     // ## 构建相关
     /*
+    * 真正支持 TS 类型检查
+    * https://www.gatsbyjs.com/plugins/gatsby-plugin-ts/
+    * */
+    {
+      resolve: `gatsby-plugin-ts`,
+      options: {
+        tsLoader: {
+          logLevel: `warn`,
+        },
+        forkTsCheckerPlugin: {
+          eslint: true,
+        },
+        codegen: false,
+      },
+    },
+
+    /*
     * manifest 文件生成，PWA 说明文件的一部分
     * 允许用户将网站作为应用添加到主屏幕上
     * https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/
