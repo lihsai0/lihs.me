@@ -1,11 +1,11 @@
-import { Link } from "gatsby"
-import React from "react"
+import { Link } from 'gatsby'
+import React from 'react'
 
 type HeaderProperties = {
   siteTitle: string
 }
 
-const Header:React.FC<HeaderProperties> = ({ siteTitle }) => (
+const Header: React.FC<HeaderProperties> = ({ siteTitle }) => (
   <header
     style={{
       background: `rebeccapurple`,
