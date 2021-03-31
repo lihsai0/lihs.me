@@ -1,7 +1,7 @@
 {
-  "name": "lihs-blog",
+  "name": "lihs",
   "private": true,
-  "description": "A simple blog of lihs with Gatsby",
+  "description": "A simple site of lihs with Gatsby",
   "version": "0.1.0",
   "author": "lihs <lihsai0@gmail.com>",
   "keywords": [

@@ -38,6 +38,8 @@ const Layout: React.FC = ({ children }) => {
             marginTop: `2rem`,
           }}
         >
+          <a href="http://beian.miit.gov.cn/">津ICP备17007807号</a>
+          <br/>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
