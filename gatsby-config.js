@@ -5,6 +5,12 @@ module.exports = {
     author: `@lihs`,
   },
   plugins: [
+    // ## CMS
+    /*
+    * Content Manage System
+    * https://www.gatsbyjs.com/plugins/gatsby-plugin-netlify-cms
+    * */
+    `gatsby-plugin-netlify-cms`,
     // ## 构建相关
     /*
      * 真正支持 TS 类型检查
