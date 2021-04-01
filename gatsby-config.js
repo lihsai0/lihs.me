@@ -67,12 +67,24 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `contents`,
+        path: `${__dirname}/contents`,
+      },
+    },
 
     /*
      * 为 GraphQL 提供了访问图片的能力
      * https://www.gatsbyjs.org/packages/gatsby-transformer-sharp/
      * */
     `gatsby-transformer-sharp`,
+
+    /*
+    * 提供 md 向 html 的转换能力
+    * */
+    `gatsby-transformer-remark`,
 
     // ## 页面元素相关
     /*

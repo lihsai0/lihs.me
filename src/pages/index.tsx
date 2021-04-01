@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -8,7 +9,9 @@ const IndexPage: React.FC = () => (
   <Layout>
     <SEO title="Lihs Home" />
     <h1>你好，World</h1>
-    <a href="/blog/">Go to blog</a>
+    <Link to="/blog/">
+      <h1>Go to blog</h1>
+    </Link>
     <Snake />
 
   </Layout>
