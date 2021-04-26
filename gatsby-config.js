@@ -84,7 +84,26 @@ module.exports = {
     /*
     * 提供 md 向 html 的转换能力
     * */
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          /*
+          * 提供了 md 中使用 LaTeX 数学公式的能力
+          * */
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              strict: 'ignore',
+            },
+          },
+          /*
+          * 提供了 md 中标题前链接的功能
+          * */
+          `gatsby-remark-autolink-headers`,
+        ],
+      },
+    },
 
     // ## 页面元素相关
     /*

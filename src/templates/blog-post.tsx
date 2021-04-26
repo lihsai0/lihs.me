@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, Link, PageProps } from 'gatsby'
+import "katex/dist/katex.min.css"
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -7,6 +8,7 @@ import SEO from '../components/seo'
 type MarkdownRemark = {
   id: string
   html: string
+  tableOfContents: string
   excerpt: string
   fields: {
     slug: string
@@ -69,6 +71,14 @@ const BlogPostTemplate: React.FC<PageProps<DataProps, BlogPostPageContext>> = ({
           <p>{post.frontmatter.date}</p>
           <p>标签：{post.frontmatter.tags.join(' ')}</p>
         </header>
+        <details>
+          <summary>点击展开目录</summary>
+          <section
+            className="toc"
+            dangerouslySetInnerHTML={{ __html: post.tableOfContents }}
+          />
+        </details>
+        <hr />
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
@@ -123,6 +133,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
+      tableOfContents
       html
       fields {
         slug
