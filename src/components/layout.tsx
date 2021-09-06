@@ -59,11 +59,17 @@ const Layout: React.FC<DataProps> = ({
             marginTop: `2rem`
           }}
         >
-          <a href='http://beian.miit.gov.cn/'>津ICP备17007807号</a>
+          <a href='https://beian.miit.gov.cn/'>津ICP备17007807号</a>
           <br />
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href='https://www.gatsbyjs.com'>Gatsby</a>
+          <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <img alt="知识共享许可协议" style={{ margin: 0 }} src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+          </a>
+          <br />
+          本站所有原创内容采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+          <br />
+          转载请注明出处！
+          <br />
+          Built with <a href='https://www.gatsbyjs.com'>Gatsby</a>
         </footer>
       </div>
     </>
