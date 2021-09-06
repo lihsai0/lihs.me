@@ -23,7 +23,7 @@ module.exports = {
           logLevel: `warn`,
         },
         forkTsCheckerPlugin: {
-          eslint: true,
+          // eslint: true,
         },
         codegen: false,
       },
