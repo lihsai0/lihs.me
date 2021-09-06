@@ -3,7 +3,7 @@ import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 
 
-const MindmapsPage: React.FC = () => {
+const MindMapsPage: React.FC = () => {
   const mindMaps = [
     {
       name: 'Hadoop',
@@ -31,10 +31,10 @@ const MindmapsPage: React.FC = () => {
       <SEO title='思维导图分享' />
       <h1>思维导图分享</h1>
       <ul>
-        { mindMaps.map(mindmap => (<li><a href={mindmap.link}>{mindmap.name}</a></li>)) }
+        { mindMaps.map(mindMap => (<li><a href={mindMap.link}>{mindMap.name}</a></li>)) }
       </ul>
     </Layout>
   )
 }
 
-export default MindmapsPage
+export default MindMapsPage
