@@ -1,0 +1,25 @@
+@layer base {
+  h1.default-heading {
+    @apply text-5xl font-bold;
+  }
+
+  h2.default-heading {
+    @apply text-4xl font-bold;
+  }
+
+  h3.default-heading {
+    @apply text-3xl font-bold;
+  }
+
+  h4.default-heading {
+    @apply text-2xl font-bold;
+  }
+
+  h5.default-heading {
+    @apply text-xl font-bold;
+  }
+
+  h6.default-heading {
+    @apply text-lg font-bold;
+  }
+}

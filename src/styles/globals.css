@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+}
+
+@import "./base.css";
+@import "./typography.css";
+@import "./daisyui.css";
+@import "./icon.css";
+@import "./markdown.css";
+@import "./highlight.css";

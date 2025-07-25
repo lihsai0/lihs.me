@@ -1,0 +1,58 @@
+@utility prose {
+  p {
+    @apply mt-0;
+  }
+
+  li > p {
+    @apply m-0;
+  }
+
+  blockquote {
+    p {
+      &:first-of-type::before,
+      &:last-of-type::after {
+        @apply content-none hidden;
+      }
+    }
+  }
+
+  pre {
+    @apply bg-base-300 text-base-content;
+  }
+
+  kbd {
+    @apply kbd;
+  }
+
+  details > summary {
+    @apply hover:cursor-pointer;
+  }
+
+  mark {
+    --mark-bg-color-from: color-mix(
+      in oklab,
+      var(--color-primary, var(--color-base-content)) 12%,
+      var(--color-base-100)
+    );
+    --mark-bg-color-via: color-mix(
+      in oklab,
+      var(--color-primary, var(--color-base-content)) 22%,
+      var(--color-base-100)
+    );
+    --mark-bg-color-to: color-mix(
+      in oklab,
+      var(--color-primary, var(--color-base-content)) 10%,
+      var(--color-base-100)
+    );
+    @apply px-2 -mx-2;
+    @apply rounded-tl-[0.8em] rounded-tr-[0.3em] rounded-bl-[0.2em] rounded-br-[0.7em];
+    background: 0 0;
+    background-image: linear-gradient(
+      to right,
+      var(--mark-bg-color-from),
+      var(--mark-bg-color-via) 5%,
+      var(--mark-bg-color-to)
+    );
+    color: var(--tw-prose-body);
+  }
+}

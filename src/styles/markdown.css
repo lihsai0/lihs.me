@@ -1,0 +1,66 @@
+.markdown-alert {
+  --markdown-alert-color: inherit;
+
+  @apply border-s-4 px-4 py-2 mb-4;
+  border-color: var(--markdown-alert-color);
+
+  & > :last-child {
+    @apply mb-0;
+  }
+
+  .markdown-alert-title {
+    @apply flex items-center font-medium;
+    @apply leading-none mt-0;
+
+    color: var(--markdown-alert-color);
+
+    svg {
+      @apply mr-2;
+      fill: currentColor;
+    }
+  }
+
+  &.markdown-alert-note {
+    --markdown-alert-color: var(--color-info);
+  }
+  &.markdown-alert-tip {
+    --markdown-alert-color: var(--color-success);
+  }
+  &.markdown-alert-important {
+    --markdown-alert-color: var(--color-primary);
+  }
+  &.markdown-alert-warning {
+    --markdown-alert-color: var(--color-warning);
+  }
+  &.markdown-alert-caution {
+    --markdown-alert-color: var(--color-error);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+
+  & > a[aria-hidden] {
+    text-decoration: none;
+  }
+
+  .markdown-icon.markdown-icon-link {
+    @apply after:content-['#'];
+    @apply opacity-0;
+    @apply transition-opacity;
+    @apply px-2;
+    position: absolute;
+    transform: translateX(-100%);
+  }
+
+  &:hover {
+    .markdown-icon.markdown-icon-link {
+      opacity: 1;
+    }
+  }
+}

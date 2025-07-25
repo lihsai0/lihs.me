@@ -1,0 +1,5 @@
+.alert {
+  .alert-important {
+    --alert-color: var(--color-primary);
+  }
+}
