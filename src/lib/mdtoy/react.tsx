@@ -9,6 +9,10 @@ export const Markdown: React.FC<{ children: string | null | undefined }> = ({
   return (
     <ReactMarkdown
       remarkRehypeOptions={{
+        footnoteLabel: "脚注",
+        footnoteBackLabel: (reIndex, rereIndex) => {
+          return `返回内容 ${reIndex + 1}${rereIndex > 1 ? `-(${rereIndex})` : ""}`;
+        },
         // this has been done by rehype-sanitize
         clobberPrefix: "",
       }}

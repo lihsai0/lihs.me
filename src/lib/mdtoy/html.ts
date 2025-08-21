@@ -11,7 +11,12 @@ export const mdToHTML = (() => {
     // use default plugins
     .use(remarkPlugins)
     // convert to html processor
-    .use(remarkRehype)
+    .use(remarkRehype, {
+      footnoteLabel: "脚注",
+      footnoteBackLabel: (reIndex, rereIndex) => {
+        return `返回内容 ${reIndex + 1}${rereIndex > 1 ? `-(${rereIndex})` : ""}`;
+      },
+    })
     // use default plugins
     .use(rehypePlugins)
     // toString
