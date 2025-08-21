@@ -1,13 +1,15 @@
-import Navbar from "@ui/nav";
+import Link from "next/link";
 
+import Navbar from "@ui/nav";
 import CC from "@ui/cc";
 import ICP from "@ui/icp";
-import Link from "next/link";
+
+import { MENU_LIST } from "@consts/nav";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+      <Navbar data={MENU_LIST} />
       <main className="container mx-auto p-4 flex-grow flex justify-center items-center">
         <div className="hero">
           <div className="hero-content text-center">

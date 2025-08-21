@@ -6,17 +6,23 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LucideExternalLink } from "lucide-react";
 
-import { MENU_LIST, LinkItem, OutlinkItem, SubItems } from "./data";
+import {
+  MenuItem as MenuItemType,
+  LinkItem,
+  OutlinkItem,
+  SubItems,
+} from "./types";
 
 type Mode = "dropdown" | "submenu";
 
-const MenuList: FC<{ className?: string; mode?: Mode }> = ({
-  className,
-  mode,
-}) => {
+const MenuList: FC<{
+  data: MenuItemType[];
+  className?: string;
+  mode?: Mode;
+}> = ({ data, className, mode }) => {
   return (
     <ul className={clsx("menu md:menu-horizontal md:space-x-1", className)}>
-      {MENU_LIST.map((item) => {
+      {data.map((item) => {
         const key = `${item.type}-${item.name}`;
         switch (item.type) {
           case "link":

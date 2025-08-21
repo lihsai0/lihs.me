@@ -1,9 +1,13 @@
+import { FC } from "react";
 import Link from "next/link";
 import { LucideMenu } from "lucide-react";
 
+import { MenuItem as MenuItemType } from "./types";
 import MenuList from "./menu-list";
 
-export default function Navbar() {
+const Navbar: FC<{
+  data: MenuItemType[];
+}> = ({ data }) => {
   return (
     <nav className="navbar">
       <div className="navbar-start">
@@ -12,12 +16,13 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="navbar-end">
-        <MenuList className="hidden md:flex" mode="dropdown" />
+        <MenuList data={data} className="hidden md:flex" mode="dropdown" />
         <details className="dropdown dropdown-end md:hidden">
           <summary className="btn m-1">
             <LucideMenu />
           </summary>
           <MenuList
+            data={data}
             className="
               dropdown-content
               w-[95vw]
@@ -32,4 +37,6 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;

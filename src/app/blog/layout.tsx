@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-
 import Navbar from "@ui/nav";
 import ICP from "@ui/icp";
 import CC from "@ui/cc";
+
+import { MENU_LIST } from "@consts/nav";
 
 export default function BlogLayout({
   children,
@@ -11,7 +11,7 @@ export default function BlogLayout({
 }) {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+      <Navbar data={MENU_LIST} />
       <main className="container mx-auto p-4 flex-grow">{children}</main>
       <footer className="p-6 text-center text-sm">
         <ICP />
