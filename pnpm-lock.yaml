@@ -97,10 +97,10 @@ importers:
         version: 5.0.0
     devDependencies:
       '@eslint/eslintrc':
-        specifier: ^3.3.1
+        specifier: ^3
         version: 3.3.1
       '@tailwindcss/postcss':
-        specifier: ^4.1.12
+        specifier: ^4
         version: 4.1.12
       '@tailwindcss/typography':
         specifier: ^0.5.16
@@ -109,28 +109,28 @@ importers:
         specifier: ^4.0.4
         version: 4.0.4
       '@types/node':
-        specifier: ^20.19.11
+        specifier: ^20
         version: 20.19.11
       '@types/react':
-        specifier: ^19.1.10
+        specifier: ^19
         version: 19.1.10
       '@types/react-dom':
-        specifier: ^19.1.7
+        specifier: ^19
         version: 19.1.7(@types/react@19.1.10)
       daisyui:
-        specifier: ^5.0.50
+        specifier: ^5
         version: 5.0.50
       eslint:
-        specifier: ^9.33.0
+        specifier: ^9
         version: 9.33.0(jiti@2.5.1)
       eslint-config-next:
         specifier: 15.4.1
         version: 15.4.1(eslint@9.33.0(jiti@2.5.1))(typescript@5.9.2)
       tailwindcss:
-        specifier: ^4.1.12
+        specifier: ^4
         version: 4.1.12
       typescript:
-        specifier: ^5.9.2
+        specifier: ^5
         version: 5.9.2
 
 packages:
@@ -1861,6 +1861,7 @@ packages:
   next@15.4.1:
     resolution: {integrity: sha512-eNKB1q8C7o9zXF8+jgJs2CzSLIU3T6bQtX6DcTnCq1sIR1CJ0GlSyRs1BubQi3/JgCnr9Vr+rS5mOMI38FFyQw==}
     engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
+    deprecated: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/CVE-2025-66478 for more details.
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
